@@ -48,6 +48,7 @@ class App extends Component {
         fetch(
                 "https://spreadsheets.google.com/feeds/list/1wMd9FL2Pv2yz4M0eT6Bn-B4MaTG_3WO1XdkibDiUS5Y/1/public/full?alt=json"
             )
+        .then(err => console.error())
             .then(data => data.json())
             .then(jsonData => {
                 this.setState({

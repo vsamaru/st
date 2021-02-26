@@ -1,23 +1,7 @@
-type IndexProps = {
-  message: string;
-};
+import React, { Component } from "react";
+import { render } from "react-dom";
 
-export async function getEdgeProps() {
-  return {
-    props: {
-      message: "Hello",
-    } as IndexProps,
-  };
-}
-
-// export default function Index({ message }: IndexProps) {
-//   return (
-//     <div>
-//       <p>{message}</p>
-//     </div>
-//   );
-// }
-export default function Index({ items }) => (
+const Stocks = ({ items }) => (
     <div className="table-responsive">
     <table className="table">
       <tbody>
@@ -36,7 +20,7 @@ export default function Index({ items }) => (
       </tbody>
     </table>
   </div>
-);
+)
 class App extends Component {
     constructor(props) {
         super(props);
@@ -63,3 +47,5 @@ class App extends Component {
         return <p>Loading....</p>;
     }
 }
+
+render(<App />, document.getElementById("root"));

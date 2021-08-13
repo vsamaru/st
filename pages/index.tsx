@@ -10,13 +10,14 @@ export async function getEdgeProps() {
   };
 }
 
-// export default function Index({ message }: IndexProps) {
-//   return (
-//     <div>
-//       <p>{message}</p>
-//     </div>
-//   );
-// }
+export default function Index({ message }: IndexProps) {
+  return (
+    <div>
+      <p>{message}</p>
+    </div>
+  );
+}
+/*
 export default function Index({ items }) => (
     <div className="table-responsive">
     <table className="table">
@@ -64,3 +65,4 @@ class App extends Component {
         return <p>Loading....</p>;
     }
 }
+*/
